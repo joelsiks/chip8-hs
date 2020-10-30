@@ -1,0 +1,30 @@
+cabal-version:       2.4
+
+name:                chip8
+version:             0.1.0.0
+homepage:            https://github.com/joelsiks/chip8-hs
+license:             BSD-3-Clause
+author:              Joel Sikström
+maintainer:          contact@joelsiks.com
+category:            System
+extra-source-files:  README.md
+
+executable chip8-hs
+  main-is:             main.hs
+  other-modules:       CPU.CPU
+                       CPU.Emulate
+                       CPU.LoadRom
+                       CPU.Utility
+                       Render.Renderer
+                       Render.Splash
+                       CLI.Cli
+  build-depends:       base       ^>=4.12.0.0,
+                       gloss      >=1.13.1.1,
+                       bytestring >=0.10.8.2,
+                       lens       >=4.0.0,
+                       random     >=1.0,
+                       HUnit      >=1.0.0.0,
+                       directory  >=1.0,
+                       time       >=1.8.0.2
+  hs-source-dirs:      src
+  default-language:    Haskell2010
